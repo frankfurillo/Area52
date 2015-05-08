@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/spectacular.js"></script>
+    <script>
+        var gunnarModel = {
+            firstName: 'Frank',
+            lastName: 'Furillo',
+            adress:'Pungpinevägen 18'
+        };
+        var filterModel = 1;
+
+    </script>
+</head>
+<body data-model="gunnarModel">
+    <div>
+        <h1>{{firstName}}{{lastName}}</h1>
+        <p>{{adress}}</p>
+    </div>
+    <p class="hej">Static info </p>
+    <div>
+        <input type="text" value="{{firstName}}" id="myInput1" data-model="firstName"/>
+    </div>
+
+
+
+    <button onclick="gunnarModel.firstName=document.getElementById('myInput1').value">Change first name</button>
+</body>
+</html>
